@@ -5,29 +5,29 @@ mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/
 function sumar()
 {
-	let primernumero = parseInt(txtIdNumeroUno.value);
-	let segundonumero = parseInt(txtIdNumeroDos.value);
+	let primernumero = parseInt(document.getElementById('txtIdNumeroUno').value);
+	let segundonumero = parseInt(document.getElementById('txtIdNumeroDos').value);
 	alert("La suma es "+(primernumero+segundonumero));
 }
 
 function restar()
 {
-	let primernumero = parseInt(txtIdNumeroUno.value);
-	let segundonumero = parseInt(txtIdNumeroDos.value);
+	let primernumero = parseInt(document.getElementById('txtIdNumeroUno').value);
+	let segundonumero = parseInt(document.getElementById('txtIdNumeroDos').value);
 	alert("La resta es "+(primernumero-segundonumero));
 }
 
 function multiplicar()
 {
-	let primernumero = parseInt(txtIdNumeroUno.value);
-	let segundonumero = parseInt(txtIdNumeroDos.value);
-	alert("La multiplicación es "+(primernumero*segundonumero));
+	let primernumero = parseInt(document.getElementById('txtIdNumeroUno').value);
+	let segundonumero = parseInt(document.getElementById('txtIdNumeroDos').value);
+		alert("La multiplicación es "+(primernumero*segundonumero));
 }
 
 function dividir()
 {
-	let primernumero = parseInt(txtIdNumeroUno.value);
-	let segundonumero = parseInt(txtIdNumeroDos.value);
+	let primernumero = parseInt(document.getElementById('txtIdNumeroUno').value);
+	let segundonumero = parseInt(document.getElementById('txtIdNumeroDos').value);
 	if (segundonumero===0) {
 		alert("¡No se puede dividir por cero!");
 	}

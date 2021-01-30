@@ -5,8 +5,8 @@ mostrar el resto entre el dividendo y el divisor.
 ej.: "El resto es 0 ."*/
 function SacarResto()
 {
-	let primernumero = parseInt(txtIdNumeroDividendo.value);
-	let segundonumero = parseInt(txtIdNumeroDivisor.value);
+	let primernumero = parseInt(document.getElementById('txtIdNumeroDividendo').value);
+	let segundonumero = parseInt(document.getElementById('txtIdNumeroDivisor').value);
 	if (segundonumero===0) {
 		alert("¡No se puede dividir por cero!");
 	}
