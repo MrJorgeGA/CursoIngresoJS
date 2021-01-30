@@ -15,7 +15,7 @@ function Circulo ()
 {
 	//Tomo el radio y calculo el perímetro del círculo (2*Pi*radio) y multiplico por las 3 vueltas
 	let radio = parseFloat(document.getElementById('txtIdRadio').value);
-	alert("Se necesitan "+2*3.14*radio*3+"m de alambre");
+	alert("Se necesitan "+(2*Math.PI*radio*3).toFixed(2)+"m de alambre");
 }
 function Materiales ()
 {

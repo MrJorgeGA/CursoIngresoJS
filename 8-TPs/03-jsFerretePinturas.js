@@ -6,7 +6,7 @@ function FahrenheitCentigrados ()
 {
 	//Tomamos el valor puesto por el usuario y aplicamos la conversión a partir de "°C = (°F-32)*5/9"
 	let temperatura = parseFloat(document.getElementById('txtIdTemperatura').value)
-	alert(temperatura+"°F son "+(temperatura-32)*5/9+"°C")
+	alert(temperatura+"°F son "+((temperatura-32)*5/9).toFixed(2)+"°C")
 }
 
 function CentigradosFahrenheit ()

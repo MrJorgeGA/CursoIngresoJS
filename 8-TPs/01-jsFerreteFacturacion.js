@@ -9,7 +9,7 @@ function Sumar ()
 	let precio1 = parseFloat(document.getElementById('txtIdPrecioUno').value);
 	let precio2 = parseFloat(document.getElementById('txtIdPrecioDos').value);
 	let precio3 = parseFloat(document.getElementById('txtIdPrecioTres').value);
-	alert("El precio de los tres productos es $"+(precio1+precio2+precio3));
+	alert("El precio de los tres productos es $"+(precio1+precio2+precio3).toFixed(2));
 }
 function Promedio ()
 {
@@ -17,7 +17,7 @@ function Promedio ()
 	let precio1 = parseFloat(document.getElementById('txtIdPrecioUno').value);
 	let precio2 = parseFloat(document.getElementById('txtIdPrecioDos').value);
 	let precio3 = parseFloat(document.getElementById('txtIdPrecioTres').value);
-	alert("El precio promedio de los tres productos es $"+(precio1+precio2+precio3)/3);
+	alert("El precio promedio de los tres productos es $"+((precio1+precio2+precio3)/3).toFixed(2));
 }
 function PrecioFinal ()
 {
@@ -25,5 +25,5 @@ function PrecioFinal ()
 	let precio1 = parseFloat(document.getElementById('txtIdPrecioUno').value);
 	let precio2 = parseFloat(document.getElementById('txtIdPrecioDos').value);
 	let precio3 = parseFloat(document.getElementById('txtIdPrecioTres').value);
-	alert("El precio final con IVA de los tres productos es $"+(precio1+precio2+precio3)*121/100);
+	alert("El precio final con IVA de los tres productos es $"+((precio1+precio2+precio3)*121/100).toFixed(2));
 }
