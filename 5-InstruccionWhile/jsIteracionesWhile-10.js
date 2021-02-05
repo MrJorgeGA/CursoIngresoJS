@@ -13,7 +13,7 @@ hasta que el usuario quiera, mostrar:
 function mostrar()
 {
 	//declarar contadores y variables
-	let respuesta = "si";
+	let respuesta;
 	let numeroIngresado;
 	let sumaNegativos=0;
 	let sumaPositivos=0;
@@ -21,10 +21,10 @@ function mostrar()
 	let cantidadNegativos=0;
 	let cantidadCeros=0;
 	let pares=0;
-
-	while(respuesta=="si"||respuesta=="s")
-	{
+	//do while hasta que el usuario se canse
+	do {
 		numeroIngresado=parseFloat(prompt("Ingrese un número"));
+		//cuento y sumo positivos y negativos y cuento ceros
 		if (numeroIngresado>0) {
 			cantidadPositivos++;
 			sumaPositivos+=numeroIngresado;
@@ -34,13 +34,15 @@ function mostrar()
 		} else if(numeroIngresado==0) {
 			cantidadCeros++;
 		};
+		//cuento pares
 		if (numeroIngresado%2==0) {pares++;};
 		respuesta=prompt("desea continuar?").toLowerCase();
-	};
-
+	} while(respuesta=="si"||respuesta=="s")
+	//si se han escrito numeros o no
 	if (cantidadPositivos==0&&cantidadNegativos==0&&cantidadCeros==0) {
 		document.write("No se han escrito números");
 	} else {
+		//si se han escrito negativos o no
 		if (cantidadNegativos==0) {
 			document.write("No se escribieron números negativos");
 		} else {
@@ -48,6 +50,7 @@ function mostrar()
 			document.write("\nLa cantidad de negativos es: "+cantidadNegativos);
 			document.write("\nEl promedio de negativos es: "+sumaNegativos/cantidadNegativos);
 		};
+		//si se han escrito positvos o no
 		if (cantidadPositivos==0){
 			document.write("\nNo se escribieron números positvos");
 		} else {
@@ -55,18 +58,21 @@ function mostrar()
 			document.write("\nLa cantidad de positvos es: "+cantidadPositivos);
 			document.write("\nEl promedio de positvos es: "+sumaPositivos/cantidadPositivos);
 		};
+		//si se han escrito ceros o no
 		if (cantidadCeros==0) {
 			document.write("\nNo se escribieron ceros");
 		} else {
 			document.write("\nLa cantidad de ceros es: "+cantidadCeros);
 		};
+		//si se han escrito pares o no
 		if (pares==0) {
 			document.write("\nNo se escribieron números pares");
 		} else {
 			document.write("\nLa cantidad de pares es: "+pares);
 		};
+		//si se escribieron positivos y negativos realizo la diferencia
 		if (cantidadPositivos!=0&&cantidadNegativos!=0) {
 			document.write("\nLa diferencia entre positvos y negativos es: "+(sumaPositivos-sumaNegativos));
 		};
-	}
-}//FIN DE LA FUNCIÓN
+	};
+}
