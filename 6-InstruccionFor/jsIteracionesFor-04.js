@@ -1,6 +1,7 @@
 function mostrar()
 {
-	for (var i = 0; i < 5000; i++) {
+	//utilizamos el break
+	for (var i = 0;; i++) {
 		console.log(i);
 		if (i==10) {
 			break;
